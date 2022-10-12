@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none; /* qundo clica no input ele fica com a borda preta. esse código reseta isso */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* alinha no eixo horizontal */
+  align-items: center; /* alinha no eixo  vertical. mas é interessante que exista uma altura disponível pra que o elemento se alinhe, no caso; height: 100vh*/
+  height:100vh;
+  background-color: #10131c; 
+
+}
+
+input {
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+}
+/* referenciando por tipo da tag */
+input[type=text] {
+  width: calc(100% - 9px);
+  height: 40px;
+  padding-left: 5px;
+}
+
+input[type=button] {
+  width: 100px;
+  height: 50px;
+  transition: ease 0.2s;
+  cursor: pointer;
+}
+
+div#calculadora {
+  box-shadow: 0 0 16px white; /* borda e sombreado. 0horizontal, 0 vertical e 20px de blur */
+}
+
+div#calculadora div{
+  display: flex;
+}
+
+div#calculadora div input:nth-child(4){
+  background: #212532;
+  color: white;
+  text-shadow: 0 0 12px white;
+}
+
+
+div#calculadora div input:nth-child(4):hover{
+  color: #2dfc52;
+  text-shadow: 0 0 14px #2dfc52;
+}
+
+div#quarta input:nth-child(1) {
+  background: #10131c;
+  color: white;
+  text-shadow: 0 0 12px white;
+}
+
+div#quarta input:nth-child(1):hover {
+  color: #2dfc52;
+  /*text-shadow: 0 0 12px ;*/
+  /*background-color: #2dfc52;*/
+}
+
+div#quarta input:nth-child(1), div#calculadora {
+  border-bottom-left-radius: 36px; /*é o mesmo que: border-radius: 3px 3px 3px 36px;*/
+}
+
+div#quarta input:nth-child(4), div#calculadora {
+  border-bottom-right-radius: 36px;
+}
+
+div#quarta input:nth-child(3) {
+  background-color: #2dfc52;
+  color: #212532;
+  text-shadow: 0 0 14px #212532;
+
+}
+
+div#quarta input:nth-child(3):hover {
+  background-color: #212532;
+  color:#2dfc52;
+  text-shadow: 0 0 21px #2dfc52;
+
+}
+
+input[type=button]:hover {
+  filter: brightness(80%);
+  color: #2dfc52;
+  text-shadow: 0 0 16px #2dfc52;
+  background-color: #212532;
+}
+
+input[type=button]:active {
+  /* muda o tamanho do botão quando aperta */
+  transform: scale(0.9);
+}
+

@@ -1,0 +1,31 @@
+* {
+  margin:0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+
+body {
+  display:flex;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*min-height:100vh;*/
+  background: #10131c;
+
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  width:70px;
+  height: 70px;
+  margin-left: -16%;
+  background: #212532;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+
+.navigation.active {
+margin-left: 0%
+}
